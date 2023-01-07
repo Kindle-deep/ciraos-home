@@ -1,0 +1,71 @@
+/*
+ * style.css
+*/
+
+/*
+ * --------------- General --------------- *
+*/
+
+:root {
+    --card-box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.05);
+    --card-hover-box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.09);
+    --site-background-color: #f4f4f4;
+    --card-background-color: #fff;
+    --footer-background-color: #e1e3ea;
+}
+
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: "思源宋体";
+    font-weight: 600;
+    src: url("//at.alicdn.com/wf/webfont/jHAN59XAcw7A/QELo5El7RfNnZTfi5fwH5.woff2") format("woff2"),
+        url("//at.alicdn.com/wf/webfont/jHAN59XAcw7A/C8OOVVrW8YWQJCml7IkHd.woff") format("woff");
+    font-display: swap;
+}
+
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: "阿里妈妈数黑体";
+    font-weight: 700;
+    src: url("//at.alicdn.com/wf/webfont/On4DRzNbpJ8p/CS1KhJkjei06BLRbX0RsW.woff2") format("woff2"),
+        url("//at.alicdn.com/wf/webfont/On4DRzNbpJ8p/Irxj-W913ycPdMdYzTiEG.woff") format("woff");
+    font-display: swap;
+}
+
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: "阿里巴巴普惠体";
+    font-weight: 600;
+    src: url("//at.alicdn.com/wf/webfont/jHAN59XAcw7A/wAsNbh1oEATtAXdWqu00i.woff2") format("woff2"),
+        url("//at.alicdn.com/wf/webfont/jHAN59XAcw7A/MzCJI3CjOxLL0yTVuljIW.woff") format("woff");
+    font-display: swap;
+}
+
+.iconfont {
+    font-size: 1.4em !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    /* font-family: '思源宋体', Arial, Helvetica, sans-serif; */
+    background-color: var(--site-background-color);
+}
+
+.content {}
+
+/*
+ * Dark mode
+*/
+
+@media screen and (prefers-color-scheme: dark) {
+    /* .header a {} */
+
+    .content {
+        color: #fff;
+    }
+}
