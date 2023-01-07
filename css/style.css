@@ -42,7 +42,7 @@
 }
 
 .iconfont {
-    font-size: 1.4em !important;
+    font-size: 1.6em !important;
 }
 
 * {
@@ -52,11 +52,76 @@
 }
 
 body {
-    /* font-family: '思源宋体', Arial, Helvetica, sans-serif; */
-    background-color: var(--site-background-color);
+    font-family: '阿里妈妈数黑体', Arial, Helvetica, sans-serif;
+    background-image: url('https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/2022-12-30-23-32-38.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.content {}
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.599);
+    /* opacity: 1; */
+    border-radius: 10px;
+    margin: 0 auto;
+    top: 28%;
+    left: 16%;
+    line-height: 2.4;
+    position: absolute;
+}
+
+.content img {
+    width: 10%;
+    border-radius: 100%;
+    margin: 0 auto;
+    animation: avatar-effects infinite 20s linear;
+    padding-top: 20px;
+}
+
+.content img:hover {
+    animation-play-state: paused;
+}
+
+@keyframes avatar-effects {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.author,
+.descr {
+    margin: 0 auto;
+    font-size: 1.6rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social ul {
+    list-style-type: none;
+}
+
+.social ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.social>ul:not(:first-child) {
+    margin-left: 10px;
+}
 
 /*
  * Dark mode

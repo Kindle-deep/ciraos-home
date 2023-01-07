@@ -4,8 +4,24 @@
 
 /* 屏幕可视窗口尺寸小于'720'像素的设备 */
 @media screen and (max-width: 720px) {
-    * {
+    /* * {
         margin: 0;
         padding: 0;
+    } */
+
+    /* body {
+        background-size: cover;
+        background-repeat: no-repeat;
+    } */
+
+    .content {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .author,
+    .descr {
+        font-size: 1.2rem;
+        text-align: center;
     }
 }
