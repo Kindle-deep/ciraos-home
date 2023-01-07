@@ -176,6 +176,10 @@ footer {
         background-color: #121212;
     }
 
+    header {
+        background-color: #262626;
+    }
+
     .site-title,
     .link ul li a,
     .register a,
@@ -190,5 +194,6 @@ footer {
 
     footer {
         color: #e1e3ea;
+        background-color: #262626;
     }
 }
