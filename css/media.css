@@ -9,19 +9,25 @@
         padding: 0;
     } */
 
-    /* body {
-        background-size: cover;
-        background-repeat: no-repeat;
-    } */
+    /* body {} */
+
+    header {
+        font-size: 12px;
+    }
 
     .content {
         width: 100%;
-        max-width: 200px;
+        font-size: 12px;
     }
 
     .author,
     .descr {
         font-size: 1.2rem;
         text-align: center;
+    }
+
+    footer {
+        height: max-content;
+        font-size: 10px;
     }
 }
