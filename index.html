@@ -101,13 +101,13 @@
             </div>
 
             <!--! 掌握技能 -->
-            <div class="tiles-grid tiles-group size-1 fg-white" data-group-title="掌握技能">
-                <!-- <a target="_blank" href="https://zh.wikipedia.org/wiki/MikuMikuDance" data-role="tile" data-size="small"
+            <!-- <div class="tiles-grid tiles-group size-1 fg-white" data-group-title="掌握技能">
+                <a target="_blank" href="https://zh.wikipedia.org/wiki/MikuMikuDance" data-role="tile" data-size="small"
                     class="bg-red" data-cover="mmd.png">
-                </a> -->
-                <!-- <a target="_blank" href="https://unity.com/cn" data-role="tile" data-size="small" class="bg-black">
+                </a>
+                <a target="_blank" href="https://unity.com/cn" data-role="tile" data-size="small" class="bg-black">
                     <img src="unity.jpg" class="icon">
-                </a> -->
+                </a>
                 <a target="_blank" href="https://www.adobe.com/cn/products/photoshop.html" data-role="tile"
                     data-size="small" style="background-color: #001e36">
                     <img src="PS.svg" class="icon">
@@ -120,26 +120,26 @@
                     style="background-color: #0e83cd">
                     <img src="hexo.png" class="icon">
                 </a>
-                <!-- <a data-role="tile" data-size="small" href="https://wordpress.org/" style="background-color: #016087">
+                <a data-role="tile" data-size="small" href="https://wordpress.org/" style="background-color: #016087">
                     <img src="wp.png" class="icon">
-                </a> -->
-                <!-- <a target="_blank" data-role="tile" href="https://jquery.com/" data-size="small"
+                </a>
+                <a target="_blank" data-role="tile" href="https://jquery.com/" data-size="small"
                     style="background-color:#1b75bb">
                     <img src="jq.png" class="icon">
-                </a> -->
-                <!-- <a target="_blank" data-role="tile" data-size="small" href="https://www.bootcss.com/"
+                </a>
+                <a target="_blank" data-role="tile" data-size="small" href="https://www.bootcss.com/"
                     style="background-color: #563d7c">
                     <img src="bootstrap.png" class="icon">
-                </a> -->
-                <!-- <a target="_blank" data-role="tile" data-size="small" href="https://www.blender.org/"
+                </a>
+                <a target="_blank" data-role="tile" data-size="small" href="https://www.blender.org/"
                     style="background-color: #e87d0d">
                     <img src="blender.png" class="icon">
-                </a> -->
-                <!-- <a target="_blank" data-role="tile" data-size="small" href="https://www.mockplus.cn/"
+                </a>
+                <a target="_blank" data-role="tile" data-size="small" href="https://www.mockplus.cn/"
                     style="background-color: #f5f5f5">
                     <img src="mockplus.png" class="icon">
-                </a> -->
-            </div>
+                </a>
+            </div> -->
 
             <!--! 盒子导航（搭建中）-->
             <div class="tiles-grid tiles-group size-2 fg-white" data-group-title="盒子导航（搭建中）">
@@ -166,7 +166,7 @@
                     <span class="fa icon-play icon"></span>
                     <span class="badge-top">0</span>
                 </a>
-                <a data-role="tile" style="background-color: #fc3">
+                <a data-role="tile" style="background-color: #500a16">
                     <span class="fa icon-pacman icon"></span>
                     <span class="branding-bar">游戏</span>
                     <span class="badge-top">0</span>
@@ -198,8 +198,13 @@
 
         <!--! 页脚 -->
         <div id="footer">
-            <p>© 2023 By Ciraos葱苓<br>Powered By <a target="_blank" style="   color: #ffffff;"
-                    href="https://metroui.org.ua/index.html ">Metro4</a></p>
+            <p>© 2023 By Ciraos葱苓<br>Powered By
+                <a target="_blank" style="   color: #ffffff;" href="https://metroui.org.ua/index.html ">Metro4</a>
+            </p>
+            <div class="footer-group">
+                <img src="avatar1.jpg" alt="avatar">
+                <p>This site is based on mainland China, please make right comments!<br>此站点建立于中国大陆，请勿发表不良言论。</p>
+            </div>
         </div>
 
     </div>
@@ -214,33 +219,23 @@
     <script src="Meting.min.js"></script>
     <!-- <script src="getmusicurl.js"></script> -->
     <script>
-        // how many bars do we want to draw? Max of 128.
         var bars = 128, hue = 320;
-        // add the bar elements to the container div:
         for (var i = 0; i < bars; i++) {
             var bar = document.createElement("div");
             bar.className = "bar";
             container.appendChild(bar);
         }
-        // create a new JAM instance:
         var jam = new JustAddMusic({
-            // default audio to load:
             paused: true,
             deltaT: 150,
             avgT: 150,
-            // label text to include in the UI (bottom left)
             <!--label: "<b>JustAddMusic.js </b>", -->
             volume: 0,
-            // set the number of spectrum values we'd like to get back:
             spectrumBins: bars,
-            // the ontick callback, called 60 time per second by default
-            // with the latest audio data object as the only parameter
             ontick: function (o) {
-                // change the base hue value on a bass hit:
                 if (o.low.hit) { hue = (hue + 100) % 360; }
 
                 for (var i = 0; i < bars; i++) {
-                    // update bars based on the spectrum values:
                     var style = container.childNodes[i].style, val = o.spectrum[i];
                     style.height = val * 20 + "%";
                     style.background = "hsl(" + (hue - val * 180) + "," + (val * 50 + 50) + "%," + (val * 40 + 20) + "%)";
