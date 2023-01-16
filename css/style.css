@@ -1,0 +1,214 @@
+/* style.css */
+
+:root {
+    --site-background-color: #f4f4f4;
+    --card-background-color: #fff;
+    --darkmode-site-background-color: #18171d;
+    --darkmode-card-background-color: rgb(53, 41, 41);
+    --darkmode-text-color: #cfccc9;
+}
+
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: "钉钉进步体";
+    font-weight: 400;
+    src: url("//at.alicdn.com/wf/webfont/jHAN59XAcw7A/9dH7uweZbXASmxo4GoCVi.woff2") format("woff2"),
+        url("//at.alicdn.com/wf/webfont/jHAN59XAcw7A/zrJ80UvzNvNZ8bVh3DJSC.woff") format("woff");
+    font-display: swap;
+}
+
+.iconfont {
+    font-size: 24.4px !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--site-background-color);
+    font-family: '钉钉进步体', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* header */
+header {
+    background-color: var(--card-background-color);
+    display: flex;
+    height: 70px;
+    transition: all .5s;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 19.4px;
+}
+
+.link {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.link ul {
+    list-style-type: none;
+}
+
+.link ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.link>ul:not(:first-child) {
+    margin-left: 4px;
+}
+
+/* .registry {} */
+
+.registry a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* content */
+.content {
+    width: 80%;
+    background-color: var(--card-background-color);
+    margin: 14px auto;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    line-height: 2;
+}
+
+.avatar1 {
+    width: 8%;
+    border-radius: 100%;
+    animation: avatar1-effects 10s linear infinite;
+}
+
+.avatar1:hover {
+    animation-play-state: paused;
+}
+
+@keyframes avatar1-effects {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+
+.social ul {
+    list-style-type: none;
+}
+
+.social ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* .social>ul:not(:first-child) {
+    margin-left: 10px;
+} */
+
+/* footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--card-background-color);
+    width: 100%;
+    /* padding: 4px 0; */
+}
+
+.footer-group {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    /* width: 80%; */
+    /* margin: 0 auto; */
+    padding: 18px 0;
+    justify-content: space-evenly;
+}
+
+.footer-group-item {
+    display: block;
+    line-height: 1.66;
+    float: left;
+}
+
+.footer-group-item-title {
+    margin-bottom: 0.7rem;
+    font-size: 1.62rem;
+}
+
+.footer-group ul {
+    list-style-type: none;
+}
+
+.footer-group ul li a {
+    text-decoration: none;
+    color: #36292f;
+}
+
+.footer-group-item>ul:not(:first-child) {
+    margin-top: 2px;
+}
+
+/* .footer-group>.footer-group-item:not(:first-child) {
+    margin-left: 40px;
+} */
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(39, 36, 36);
+    }
+
+    header {
+        background-color: var(--darkmode-card-background-color);
+    }
+
+    .site-title,
+    .link ul li a,
+    .registry a,
+    .fengefu {
+        color: var(--darkmode-text-color);
+    }
+
+    .content {
+        background-color: var(--darkmode-card-background-color);
+    }
+
+    .author,
+    .mingyan,
+    .social ul li a {
+        color: var(--darkmode-text-color);
+    }
+
+    footer {
+        background-color: var(--darkmode-card-background-color);
+    }
+
+    .footer-group-item,
+    .footer-group ul li a {
+        color: var(--darkmode-text-color);
+    }
+}

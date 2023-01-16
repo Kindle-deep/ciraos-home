@@ -1,269 +1,110 @@
 <!DOCTYPE html>
-<html lang="Zh-cn">
+<html lang="zh-CN">
 
 <head>
-    <meta name="viewport"
-        content="width=device-width,initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="ねぎ苓 - ITCIRAOS.CN">
-    <meta property="og:url" content="http://itciraos.cn">
-    <meta property="og:site_name" content="ねぎ苓 - ITCIRAOS.CN">
-    <meta property="og:description" content="ITCIRAOS.CN">
-    <meta property="og:image" content="">
-    <script defer src="cw.js"></script>
-    <script defer src="cw-worker.js"></script>
-    <link rel="shortcut icon"
-        href="https://gcore.jsdelivr.net/gh/ciraos/ciraos-static@main/img/2022-12-30-23-26-12.webp" type="image/x-icon">
-    <link rel="icon" href="https://gcore.jsdelivr.net/gh/ciraos/ciraos-static@main/img/2022-12-30-23-26-12.webp"
-        type="image/x-icon">
-    <link rel="stylesheet" href="APlayer.min.css">
-    <link href="metro-all.css?ver=@@b-version" rel="stylesheet">
-    <link href="start.css" rel="stylesheet">
-    <link href="justaddmusic.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="js/cw-worker.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_1979953_68psxurufeb.css">
     <title>ITCIRAOS.CN</title>
 </head>
 
-<body class="bg-dark fg-white h-vh-100 m4-cloak">
+<body>
 
-    <div class="container-fluid start-screen h-100 main"
-        style="backdrop-filter: blur(10px);width:100%;overflow-x:hidden">
-        <!--! title -->
-        <h1 class="start-screen-title">ITCIRAOS.CN</h1>
-
-        <!--! 创建 -->
-        <div class="tiles-area clear">
-
-            <div class="tiles-grid tiles-group size-2 fg-white" data-group-title="创建">
-                <a href="https://blog.itciraos.cn" data-role="tile" class=" fg-white"
-                    data-cover="https://gcore.jsdelivr.net/gh/ciraos/ciraos-static@main/img/2022-12-30-23-32-38.webp"
-                    data-size="wide">
-                    <span class="branding-bar">我的博客</span>
-                </a>
-                <a target="_blank" href="https://steamcommunity.com/profiles/76561198397399116/" data-role="tile"
-                    data-size="small" style="background-color: #2a475e">
-                    <span class="fa icon-steam icon"></span>
-                </a>
-                <a target="_blank" href="https://github.com/ciraos" data-role="tile" data-size="small"
-                    class="bg-indigo">
-                    <span class="fa icon-github icon"></span>
-                </a>
-                <a target="_blank" href="https://space.bilibili.com/142450786/" data-role="tile" data-size="small"
-                    style="background-color: #ff5c7c">
-                    <span class="fa icon-bilibili-line icon"></span>
-                </a>
-                <a target="_blank" data-role="tile" data-size="small" style="background-color: #fc3">
-                    <span class="fa icon-weibo icon"></span>
-                </a>
-                <!--? 天气 -->
-                <!-- <div id="weather-v2-plugin-standard" data-role="tile" data-size="wide"></div> -->
-            </div>
-
-            <!--! 关于我 -->
-            <div class="tiles-grid tiles-group size-2 fg-white" data-group-title="关于我">
-                <div data-role="tile" data-cover="avatar1.jpg">
-                    <span class="branding-bar">ねぎ苓</span>
-                </div>
-                <div data-role="tile" class=" fg-white" style="background-color: #60a917">
-                    <ul>
-                        <li style="list-style-type:none;font-size: 0.8rem;"> <b>性别：</b>男</li>
-                        <li style="list-style-type:none;font-size: 0.8rem;"> <b>年龄：</b>24</li>
-                        <li style="list-style-type:none;font-size: 0.8rem;"> <b>住址：</b>安徽 淮南</li>
-                        <li style="list-style-type:none;font-size: 0.8rem;"> <b>学历：</b>专科 搬砖</li>
-                        <li style="list-style-type:none;font-size: 0.8rem;"> <b>爱好：</b>游戏 动漫</li>
-                    </ul>
-                    <span class="branding-bar">个人信息</span>
-                </div>
-                <div data-role="tile" class="  fg-white" style="background-color: #2a475e" data-size="wide">
-                    <ul>
-                        <span style="font-size: 0.8rem">我，爱研究技术。😊<br>
-                            擅长玩游戏。🎮<br>
-                            <!-- 目标是前往日本读博。🗾<br>
-                            学习更多技术，提升自我。✊ --></span>
-                        <span class="branding-bar">自我介绍</span>
-                    </ul>
-                </div>
-                <div data-role="tile" class="bg-teal fg-white" data-size="wide">
-                    <ul>
-                        <li style="list-style-type:none;font-size: 0.7rem;margin-top:10px">
-                            <b>🎓&nbsp&nbsp&nbsp专科&nbsp&nbsp&nbsp2017-2020</b>
-                        </li>
-                        <li style="list-style-type:none;font-size: 0.8rem;padding-bottom:10px;"> 天津铁道职业技术学院 铁道运输
-                            铁道交通运营管理</li>
-                        <li style="list-style-type:none;font-size: 0.7rem;">
-                            <b>🚆&nbsp&nbsp&nbsp社畜&nbsp&nbsp&nbsp2020-至今</b>
-                        </li>
-                        <li style="list-style-type:none;font-size: 0.8rem;">铁路内燃机车乘务员</li>
-                    </ul>
-                    <span class="branding-bar">教育经历</span>
-                </div>
-            </div>
-
-            <!--! 掌握技能 -->
-            <!-- <div class="tiles-grid tiles-group size-1 fg-white" data-group-title="掌握技能">
-                <a target="_blank" href="https://zh.wikipedia.org/wiki/MikuMikuDance" data-role="tile" data-size="small"
-                    class="bg-red" data-cover="mmd.png">
-                </a>
-                <a target="_blank" href="https://unity.com/cn" data-role="tile" data-size="small" class="bg-black">
-                    <img src="unity.jpg" class="icon">
-                </a>
-                <a target="_blank" href="https://www.adobe.com/cn/products/photoshop.html" data-role="tile"
-                    data-size="small" style="background-color: #001e36">
-                    <img src="PS.svg" class="icon">
-                </a>
-                <a target="_blank" href="https://www.adobe.com/cn/products/premiere.html" data-role="tile"
-                    data-size="small" style="background-color: #00005b">
-                    <img src="PR.svg" class="icon">
-                </a>
-                <a target="_blank" data-role="tile" href="https://hexo.io/zh-cn/" data-size="small"
-                    style="background-color: #0e83cd">
-                    <img src="hexo.png" class="icon">
-                </a>
-                <a data-role="tile" data-size="small" href="https://wordpress.org/" style="background-color: #016087">
-                    <img src="wp.png" class="icon">
-                </a>
-                <a target="_blank" data-role="tile" href="https://jquery.com/" data-size="small"
-                    style="background-color:#1b75bb">
-                    <img src="jq.png" class="icon">
-                </a>
-                <a target="_blank" data-role="tile" data-size="small" href="https://www.bootcss.com/"
-                    style="background-color: #563d7c">
-                    <img src="bootstrap.png" class="icon">
-                </a>
-                <a target="_blank" data-role="tile" data-size="small" href="https://www.blender.org/"
-                    style="background-color: #e87d0d">
-                    <img src="blender.png" class="icon">
-                </a>
-                <a target="_blank" data-role="tile" data-size="small" href="https://www.mockplus.cn/"
-                    style="background-color: #f5f5f5">
-                    <img src="mockplus.png" class="icon">
-                </a>
-            </div> -->
-
-            <!--! 盒子导航（搭建中）-->
-            <div class="tiles-grid tiles-group size-2 fg-white" data-group-title="盒子导航（搭建中）">
-                <a data-role="tile" data-cover="box.png">
-                    <span class="branding-bar">盒子</span>
-                    <span class="badge-top">0</span>
-                </a>
-                <a data-role="tile" style="background-color: #727272">
-                    <span class="fa icon-chrome icon"></span>
-                    <span class="branding-bar">网站</span>
-                    <span class="badge-top">0</span>
-                </a>
-                <a href="http://zfe.space/music/" data-role="tile" data-cover="eastmusic.jpg">
-                    <span class="branding-bar">音乐</span>
-                    <span class="badge-top">1000+</span>
-                </a>
-                <a data-role="tile" class="bg-green">
-                    <span class="fa icon-images icon"></span>
-                    <span class="branding-bar">图库</span>
-                    <span class="badge-top">0</span>
-                </a>
-                <a data-role="tile">
-                    <span class="branding-bar" class="bg-blue">电影</span>
-                    <span class="fa icon-play icon"></span>
-                    <span class="badge-top">0</span>
-                </a>
-                <a data-role="tile" style="background-color: #500a16">
-                    <span class="fa icon-pacman icon"></span>
-                    <span class="branding-bar">游戏</span>
-                    <span class="badge-top">0</span>
-                </a>
-            </div>
-
-            <!--! 网站信息 --->
-            <div class="tiles-grid tiles-group size-2 fg-white" data-group-title="网站信息">
-                <a href="/" data-role="tile" class="bg-indigo fg-white">
-                    <span class="fa icon-uniE903 icon"></span>
-                    <span class="branding-bar">网站监控</span>
-                    <span class="badge-bottom">0</span>
-                </a>
-                <a data-role="tile" data-cover="visitor.png">
-                    <span class="branding-bar">访问量</span>
-                    <span class="badge-bottom" id="busuanzi_value_site_pv"></span>
-                </a>
-                <a href="mailto:frank.ka@foxmail.com" data-role="tile" class="bg-black fg-white">
-                    <span class="fa icon-mail4 icon"></span>
-                    <span class="branding-bar">联系我</span>
-                </a>
-            </div>
+    <!-- header -->
+    <header class="header" id="header">
+        <div class="site-title">ITCIRAOS.CN</div>
+        <div class="link">
+            <ul>
+                <li><a href="/">主页</a></li>
+            </ul>
+            <ul>
+                <li><a href=""></a></li>
+            </ul>
+            <ul>
+                <li><a href=""></a></li>
+            </ul>
+            <ul>
+                <li><a target="_blank" rel="noopener noreferrer" href="https://blog.itciraos.cn">博客</a></li>
+            </ul>
         </div>
-
-        <!-- Aplayer -->
-        <!-- <div class="musiccontainer" id="container" style="position: fixed; right:0; bottom:0;"></div>
-        <div data-fixed="true" data-order="random" data-size="wide" class="aplayer" data-id="5249407673"
-            data-server="netease" data-type="playlist" data-list-folded="true" data-volume="1.0"></div> -->
-
-        <!--! 页脚 -->
-        <div id="footer">
-            <p>© 2023 By Ciraos葱苓<br>Powered By
-                <a target="_blank" style="   color: #ffffff;" href="https://metroui.org.ua/index.html ">Metro4</a>
-            </p>
-            <div class="footer-group">
-                <img src="avatar1.jpg" alt="avatar">
-                <p>This site is based on mainland China, please make right comments!<br>此站点建立于中国大陆，请勿发表不良言论。</p>
-            </div>
+        <div class="registry">
+            <a href="/">登录</a>
+            <span class="fengefu">/</span>
+            <a href="/">注册</a>
         </div>
+    </header>
 
+    <!-- content -->
+    <div class="content">
+        <img src="/img/avatar1.jpg" alt="avatar1" class="avatar1">
+        <div class="author">Ciraos葱苓</div>
+        <div class="mingyan">宝剑锋从磨砺出，梅花香自苦寒来。</div>
+        <div class="social">
+            <ul>
+                <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/ciraos"><i
+                            class="iconfont icon-github"></i></a></li>
+            </ul>
+            <ul>
+                <li><a target="_blank" rel="noopener noreferrer" href="https://gitee.com/ciraos"><i
+                            class="iconfont icon-gitee"></i></a></li>
+            </ul>
+            <ul>
+                <li><a href="mailto:frank.ka@foxmail.com"><i class="iconfont icon-youjian"></i></a></li>
+            </ul>
+        </div>
     </div>
 
-    <!--!! scripts -->
-    <script src="jquary.js"></script>
-    <script src="JustAddMusic.js"></script>
-    <script src="APlayer.min.jam.js"></script>
-    <script async src="busuanzi.js"></script>
-    <script src="metro.js"></script>
-    <script src="start.js"></script>
-    <script src="Meting.min.js"></script>
-    <!-- <script src="getmusicurl.js"></script> -->
-    <script>
-        var bars = 128, hue = 320;
-        for (var i = 0; i < bars; i++) {
-            var bar = document.createElement("div");
-            bar.className = "bar";
-            container.appendChild(bar);
-        }
-        var jam = new JustAddMusic({
-            paused: true,
-            deltaT: 150,
-            avgT: 150,
-            <!--label: "<b>JustAddMusic.js </b>", -->
-            volume: 0,
-            spectrumBins: bars,
-            ontick: function (o) {
-                if (o.low.hit) { hue = (hue + 100) % 360; }
+    <!-- footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-group">
+            <div class="footer-group-item">
+                <div class="footer-group-item-title">导航</div>
+                <ul>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://blog.itciraos.cn/archives">归档</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://blog.itciraos.cn/friends">友人帐</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://blog.itciraos.cn/talk">留言板</a></li>
+                </ul>
+                <ul>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://blog.itciraos.cn">更多</a></li>
+                </ul>
+            </div>
+            <div class="footer-group-item">
+                <div class="footer-group-item-title">生活</div>
+                <ul>
+                    <li><a target="_blank" rel="noopener norferrer"
+                            href="https://music.163.com/#/user/home?id=590417082">网易云</a></li>
+                </ul>
+                <ul>
+                    <li><a target="_blank" rel="noopener norferrer"
+                            href="https://www.zhihu.com/people/liang-qi-gong-cheng-shi">知乎</a></li>
+                </ul>
+                <ul>
+                    <li><a target="_blank" rel="noopener norferrer" href=""></a></li>
+                </ul>
+                <ul>
+                    <li><a target="_blank" rel="noopener norferrer" href=""></a></li>
+                </ul>
+            </div>
+            <div class="footer-group-item">
+                <div class="footer-group-item-title">协议</div>
+                <ul>
+                    <li><a href="/">隐私协议</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
-                for (var i = 0; i < bars; i++) {
-                    var style = container.childNodes[i].style, val = o.spectrum[i];
-                    style.height = val * 20 + "%";
-                    style.background = "hsl(" + (hue - val * 180) + "," + (val * 50 + 50) + "%," + (val * 40 + 20) + "%)";
-                }
-            }
-        });
-        setTimeout(function () {
-            jam.loadAudio(ap.audio.currentSrc);
-            $(".aplayer-list").click(function () {
-                ap.volume(0, true);
-                setTimeout(function () { jam.loadAudio(ap.audio.currentSrc); console.log(ap.audio.currentSrc) }, 500);
-                setTimeout(function () { ap.play(); ap.seek(0); jam.seek(0); ap.volume(1, true) }, 4000);
-            });
-            $(".aplayer-icon-back").click(function () {
-                ap.volume(0, true);
-                setTimeout(function () { jam.loadAudio(ap.audio.currentSrc); console.log(ap.audio.currentSrc) }, 500);
-                setTimeout(function () { ap.play(); ap.seek(0); jam.seek(0); ap.volume(1, true) }, 4000);
-            });
-            $(".aplayer-icon-forward").click(function () {
-                ap.volume(0, true);
-                setTimeout(function () { jam.loadAudio(ap.audio.currentSrc); console.log(ap.audio.currentSrc) }, 500);
-                setTimeout(function () { ap.play(); ap.seek(0); jam.seek(0); ap.volume(1, true) }, 4000);
-            });
-            console.log(ap.audio.currentSrc)
-        }, 1500);
-    </script>
-    <script>WIDGET = { CONFIG: { "layout": 1, "width": "310", "height": "150", "background": 1, "dataColor": "FFFFFF", "borderRadius": 1, "key": "FtmcNnOSjp" } }</script>
-    <script src="https://apip.weatherdt.com/standard/static/js/weather-standard-common.js?v=2.0"></script>
+    <!-- scripts -->
+
 </body>
 
 </html>

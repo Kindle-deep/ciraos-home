@@ -1,0 +1,30 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.fontFamily": "'Fira code', Consolas, 'Courier New', monospace",
+    "editor.fontSize": 13,
+    "editor.fontWeight": "normal",
+    "editor.formatOnSave": true,
+    "editor.unicodeHighlight.allowedLocales": {
+        "zh-hant": true
+    },
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "explorer.sortOrder": "type",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    //! Picgo
+    "picgo.customOutputFormat": "${url}",
+    "picgo.customUploadName": "${dateTime}${extName}",
+    "picgo.picBed.current": "github",
+    //? github
+    "picgo.picBed.github.branch": "main",
+    "picgo.picBed.github.customUrl": "https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main",
+    "picgo.picBed.github.path": "img/",
+    "picgo.picBed.github.repo": "ciraos/ciraos-static",
+    "picgo.picBed.github.token": "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",
+    "powermode.enabled": false,
+    "powermode.presets": "particles",
+    "powermode.explosions.customCss": {},
+    //? smms
+    /* "picgo.picBed.smms.token": "zZZ8qNx2CwSHnQw9jmaIAqoIRCj49PRk", */
+    "workbench.colorTheme": "Dracula"
+}
