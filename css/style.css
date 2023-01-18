@@ -179,7 +179,7 @@ footer {
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: rgb(39, 36, 36);
+        background-color: var(--darkmode-site-background-color);
     }
 
     header {
