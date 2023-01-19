@@ -1,11 +1,15 @@
 /* style.css */
 
 :root {
-    --site-background-color: #f4f4f4;
+    --site-background-color: #f7f9fe;
     --card-background-color: #fff;
-    --darkmode-site-background-color: #19132D;
-    --darkmode-card-background-color: rgb(53, 41, 41);
-    --darkmode-text-color: #cfccc9;
+    --card-border-color: #c0c6d8;
+    --card-shadow-color: 0 8px 16px -4px #2c2d300c;
+    --darkmode-site-background-color: #18171d;
+    --darkmode-card-background-color: #1d1b26;
+    --darkmode-text-color: #f7f7fa;
+    --darkmode-border-color: #42444a;
+    --darkmode-shadow-color: 0 5px 12px -5px rgba(102, 68, 68, 0);
 }
 
 /* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
@@ -14,6 +18,15 @@
     font-weight: 400;
     src: url("//at.alicdn.com/wf/webfont/jHAN59XAcw7A/9dH7uweZbXASmxo4GoCVi.woff2") format("woff2"),
         url("//at.alicdn.com/wf/webfont/jHAN59XAcw7A/zrJ80UvzNvNZ8bVh3DJSC.woff") format("woff");
+    font-display: swap;
+}
+
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: "阿里妈妈数黑体";
+    font-weight: 700;
+    src: url("//at.alicdn.com/wf/webfont/jHAN59XAcw7A/zQAcAS0p9esTf-tyEQCnt.woff2") format("woff2"),
+        url("//at.alicdn.com/wf/webfont/jHAN59XAcw7A/sv4wxYvA2nEUDSsQ_pHOO.woff") format("woff");
     font-display: swap;
 }
 
@@ -28,7 +41,7 @@
 
 body {
     background-color: var(--site-background-color);
-    font-family: '钉钉进步体', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: '阿里妈妈数黑体', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 
 /* header */
@@ -40,6 +53,8 @@ header {
     align-items: center;
     justify-content: space-evenly;
     font-size: 19.4px;
+    border-color: var(--card-border-color);
+    box-shadow: var(--card-shadow-color);
 }
 
 .link {
@@ -76,6 +91,8 @@ header {
     padding: 10px 20px;
     border-radius: 10px;
     line-height: 2;
+    border-color: var(--card-border-color);
+    box-shadow: var(--card-shadow-color);
 }
 
 .avatar1 {
@@ -132,11 +149,14 @@ header {
 
 /* footer */
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     background-color: var(--card-background-color);
     width: 100%;
     /* padding: 4px 0; */
+    border-color: var(--card-border-color);
+    box-shadow: var(--card-shadow-color);
+    clear: both;
 }
 
 .footer-group {
@@ -176,6 +196,16 @@ footer {
     margin-left: 40px;
 } */
 
+.footer-group-end {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10px;
+}
+
+/* .footer-group-end p {} */
+
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     body {
@@ -184,31 +214,40 @@ footer {
 
     header {
         background-color: var(--darkmode-card-background-color);
+        border-color: var();
+        box-shadow: var(--darkmode-shadow-color);
     }
 
     .site-title,
     .link ul li a,
     .registry a,
-    .fengefu {
-        color: var(--darkmode-text-color);
+    .registry span {
+        color: #fff;
     }
 
     .content {
         background-color: var(--darkmode-card-background-color);
+        border-color: var();
+        box-shadow: var(--darkmode-shadow-color);
     }
 
     .author,
     .mingyan,
     .social ul li a {
-        color: var(--darkmode-text-color);
+        color: #fff;
     }
 
     footer {
         background-color: var(--darkmode-card-background-color);
+        border-color: var();
+        box-shadow: var(--darkmode-shadow-color);
     }
 
-    .footer-group-item,
-    .footer-group ul li a {
-        color: var(--darkmode-text-color);
+    .footer-group-item-title {
+        color: #a1a2b8;
+    }
+
+    .footer-group-item ul li a {
+        color: #fff;
     }
 }
